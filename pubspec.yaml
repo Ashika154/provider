@@ -1,0 +1,31 @@
+name: my_first_app
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Add your external packages here
+  provider: ^6.1.5
+
+  
+
+  cupertino_icons: ^1.0.2  # Icons for iOS-style widgets
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0  # Helps catch coding errors
+
+flutter:
+
+  # Include image, font, or other assets here
+  uses-material-design: true

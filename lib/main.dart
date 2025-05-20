@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'data_class.dart';
 import 'home_page.dart';
 
+
 void main() {
   runApp(const WhatsAppUI());
 }

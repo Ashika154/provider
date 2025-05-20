@@ -17,7 +17,7 @@ class _SecondPageState extends State<SecondPage> {
       appBar: AppBar(
         leading: Icon(Icons.shopping_cart),
         actions: [Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding:  EdgeInsets.all(8.0),
           child: Text("Shopping cart",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
         )],
       ),
@@ -40,32 +40,56 @@ class _SecondPageState extends State<SecondPage> {
           ),
           SizedBox(height: 50,),
           Padding(
-            padding: const EdgeInsets.only(left: 28.0),
+            padding:  EdgeInsets.only(left: 28.0),
             child: Row(
               children: [GestureDetector(
+                onTap: () {
+                  if (Provider.of<DataClass>(context, listen: false).x>0) {
+                    Provider.of<DataClass>(context, listen: false).decrementX();
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        backgroundColor: Colors.black,
+                        content: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children:  [
+                            Text(
+                              "Item",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                            Text(
+                              "It can't be less than this.",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  }
+                },
                 child: Container(
                   height: 60,
                   width: 60,
-                  child: Icon(CupertinoIcons.minus),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: Colors.black,
-                        width: 3,
-                      )
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 3,
+                    ),
                   ),
+                  child:  Icon(Icons.minimize),
                 ),
-                 onTap: (){
-                   Provider.of<DataClass>(context,listen: false).decrementX();}
-
-
               ),
                 Spacer(),
                 Padding(
-                  padding: const EdgeInsets.only(right: 28.0),
+                  padding:  EdgeInsets.only(right: 28.0),
                   child: Container(height: 60,width: 180,
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding:  EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           IconButton(onPressed: (){

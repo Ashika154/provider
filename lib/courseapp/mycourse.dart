@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'changecourse.dart';
 
-class Mycourse extends StatelessWidget {
+class MyCourse extends StatelessWidget {
   final String course;
 
-  const Mycourse({Key? key, required this.course}) : super(key: key);
+  const MyCourse({super.key, required this.course});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Provider.of<ChangeCourse>(context, listen: false).changeSubjects(course);
+        Provider.of<ChangeCourse>(context, listen: false)
+            .changeSubjects(course);
       },
       child: Container(
         margin: const EdgeInsets.only(top: 20, left: 20, right: 20),

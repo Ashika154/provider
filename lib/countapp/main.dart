@@ -16,6 +16,7 @@ class WhatsAppUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
+
       providers: [
         ChangeNotifierProvider(create: (_) => DataClass()),
         ChangeNotifierProvider(create: (_) => ChangeCourse()),
@@ -26,7 +27,7 @@ class WhatsAppUI extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const CourseApp(),
+        home:  CourseApp(),
       ),
     );
   }

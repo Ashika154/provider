@@ -34,6 +34,7 @@ class MyCourse extends StatelessWidget {
               offset: Offset(2, 4),
             ),
           ],
+          
           borderRadius: BorderRadius.circular(20),
         ),
         child: Center(

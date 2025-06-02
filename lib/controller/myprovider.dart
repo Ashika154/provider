@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/countapp/home_page.dart';
 import 'package:provider/provider.dart';
 
 import 'controller.dart';
@@ -9,6 +8,7 @@ class MyProvider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
